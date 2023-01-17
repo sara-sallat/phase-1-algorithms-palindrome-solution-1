@@ -1,10 +1,25 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
 
-/* 
-  Add your pseudocode here
-*/
+  // Write your algorithm here
+  function reverseString(word) {
+    // TODO: implement string reversing functionality
+    let letterOfWords = word.split('') // ['k','u','d']
+    word = [...letterOfWords].reverse() // ['d','u','k']
+    return word;
+  }
+  
+  function isPalindrome(word) {
+    // reverse the input string
+   
+    const reversedWord = reverseString(word);
+    // if the reversed string is the same as the 
+    for(let i = 0; i < word.length; i++){
+      if(word[i] === reversedWord[i]){
+        return true
+      }
+      else return false;
+      
+    }
+  }
 
 /*
   Add written explanation of your solution here
